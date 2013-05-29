@@ -22,7 +22,7 @@
 		echo $data['password'];
 		echo "<br>";
 		//echo "SELECT email,password FROM user WHERE email='".$data['email']."'";
-		echo "<br>";
+		//echo "<br>";
 		$dbquery=$this->db->query("SELECT email,password FROM user WHERE email='".$data['email']."'");
 		
 		//print_r($dbquery->result_array());

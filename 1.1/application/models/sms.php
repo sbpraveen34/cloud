@@ -1,6 +1,14 @@
 <?php
+/**
+ * This function is used
+ * 
+ */
 class Sms extends CI_Model 
 {
+	/**
+ * This function is used
+ * 
+ */
 	public function addrawMessage($data,$email)
 	{
 		$db1=$this->load->database('default', TRUE);	

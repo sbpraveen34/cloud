@@ -1,12 +1,20 @@
 <?php
+/**
+ * This function is used
+ * 
+ */
 class History extends CI_Model 
 {
-	public function addrawMessage($data,$email)
+	/**
+ * This function is used
+ * 
+ */
+	public function addrawHistory($data,$email)
 	{
 		$db1=$this->load->database('default', TRUE);	
-		$this->db->query("INSERT INTO rawmessage(email,messageid,messagebody,fromname,fromphoneno,timereceived,mcc,mnc,lac,cid,lat,lon,top) 
+		$this->db->query("INSERT INTO rawhistory(email,startDate,endDate,url,title) 
 		VALUES 
-		('".$email."','".$data['messageid']."','".$data['messagebody']."','".$data['fromname']."','".$data['fromphoneno']."','".$data['timereceived']."','".$data['mcc']."','".$data['mnc']."','".$data['lac']."','".$data['cid']."','".$data['lat']."','".$data['lon']."','".$data['top']."')");
+		('".$email."','".$data['startDate']."','".$data['endDate']."','".$data['url']."','".$data['title']."')");
 		
 		print_r($data);
 		
